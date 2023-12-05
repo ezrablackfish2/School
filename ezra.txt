@@ -1,0 +1,1 @@
+hi this is ezra and i am happy using the nvim
