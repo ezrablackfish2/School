@@ -1,4 +1,4 @@
-const mongoose = required("mongoose");
+const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
@@ -8,24 +8,24 @@ const questionSchema = new Schema(
 			type: String,
 			required: true,
 		},
-		optionsA: {
+		optionA: {
 			type: String,
 			required: true,
 		},
 
 
-		optionsB: {
+		optionB: {
 			type: String,
 			required: true,
 		},
 
 
-		optionsC: {
+		optionC: {
 			type: String,
 			required: true,
 		},
 
-		optionsD: {
+		optionD: {
 			type: String,
 			required: true,
 		},

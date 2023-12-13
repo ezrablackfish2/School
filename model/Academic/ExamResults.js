@@ -1,12 +1,11 @@
-const mongoose = required("mongoose");
+const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
 const examResultSchema = new Schema(
 	{
-		student: {
-			type: Schema.Types.ObjectId,
-			ref: "Student",
+		studentID: {
+			type: String,
 			required: true,
 		},
 		exam: {
@@ -27,6 +26,11 @@ const examResultSchema = new Schema(
 			required: true,
 			default: 50,
 		},
+		answeredQuestions: [
+			{
+				type: Object,
+			}
+		],
 		status: {
 			type: String,
 			required: true,
@@ -36,17 +40,11 @@ const examResultSchema = new Schema(
 		remarks: {
 			type: String,
 			required: true,
-			enum: ["Excellent", "Good", "Poor"],
+			enum: ["Excellent", "Good", "Poor", "Fair"],
 			default: "Poor",
 		},
-		position: {
-			type: Number,
-			required: true,
-		},
-		subject: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: "Subject",
-		},
+
+
 		classLevel: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "ClassLevel",

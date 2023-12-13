@@ -40,9 +40,9 @@ const studentSchema = new mongoose.Schema(
 
 		classLevels: [
 			{
-				type: mongoose.Schema.Types.ObjectId,
+				type: String,
 				ref: "ClassLevel",
-				required: true,
+//				required: true,
 			},
 		],
 		currentClassicLevel: {
@@ -54,7 +54,7 @@ const studentSchema = new mongoose.Schema(
 		academicYear: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "AcademicYear",
-			required: true,
+//			required: true,
 		},
 		dateAdmitted: {
 			type: Date,
@@ -71,7 +71,7 @@ const studentSchema = new mongoose.Schema(
 		program: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Program",
-			required: true,
+//			required: true,
 		},
 
 		isPromotedToLevel200: {
@@ -91,7 +91,7 @@ const studentSchema = new mongoose.Schema(
 			default: false,
 		},
 		isSuspended: {
-			type: Booealn,
+			type: Boolean,
 			default: false,
 		},
 		perfectName: {
@@ -105,7 +105,7 @@ const studentSchema = new mongoose.Schema(
 		],
 
 		yearGraduated: {
-			type: String,
+			type: Date,
 		},
 	},
 	{

@@ -92,7 +92,7 @@ exports.updateSubject = AsyncHandler(
 		},
 	);
 
-	res.status(202).json({
+	res.status(201).json({
 		status: "success",
 		message: "Subject updated successfully",
 		data: subject,
